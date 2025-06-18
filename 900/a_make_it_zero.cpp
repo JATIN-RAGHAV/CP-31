@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void solver(){
+        int n;
+        cin>>n;
+        vector<int>a(n);
+        int p;
+        for(int i=0;i<n;i++){
+                cin>>a[i];
+                if(!a[i])p=i+1;
+        }
+        if(!(n%2)){
+                cout<<2<<endl;
+                cout<<1<<' '<<n<<endl;
+                cout<<1<<' '<<n<<endl;
+        }
+        else{
+                cout<<4<<endl;
+                cout << 1 << ' ' << 2 << endl;
+                cout << 1 << ' ' << 2 << endl;
+                cout << 2 << ' ' << n << endl;
+                cout << 2 << ' ' << n << endl;
+        }
+}
+
+int main(){
+       int t;
+       cin >> t;
+       while(t--){
+               solver();
+       }
+}
