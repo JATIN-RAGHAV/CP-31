@@ -7,11 +7,13 @@ void solver(){
         string x,s;
         cin >> x >> s;
         int pos = x.find(s);
-        if(pos != string::npos)
-                cout << i << '\n';
+        if(pos != string::npos){
+                        cout << i << '\n';
+                        d = 1;
+        }
         else{
-                while(x.size() <= 4*s.size()){
-                        int pos = x.find(s);
+                while(x.size() <= 5*s.size() || i < 2){
+                        pos = x.find(s);
                         if(pos != string::npos){
                                 cout << i << '\n';
                                 d = 1;
@@ -31,13 +33,12 @@ void solver(){
                                 cout << "-1\n";
                 }
         }
-
 }
 
 int main(){
-       int t;
-       cin >> t;
-       while(t--){
-               solver();
+        int t;
+        cin >> t;
+        while(t--){
+                solver();
        }
 }
